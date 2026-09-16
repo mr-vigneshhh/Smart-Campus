@@ -6,56 +6,7 @@ Built for the **Smart Campus Assistant Challenge** during a 2-hour solo hackatho
 
 ---
 
-## 🏆 Scoring & Evaluation Priorities
 
-CampuSphere was architected from the ground up to score at the highest tier across all six AI evaluation priorities:
-
-| Priority | Criteria | Implementation Highlights |
-| :--- | :--- | :--- |
-| **#1** | **Code Quality** | Modular React 18 component architecture, strict separation of data / business logic / UI, dynamic student state management, custom services layer, zero dead code. |
-| **#2** | **Security** | Zero hardcoded secrets, environment variable configuration, HTML input sanitization, safe external links (`noopener noreferrer`), no `dangerouslySetInnerHTML`, safe local persistence. |
-| **#3** | **Efficiency** | Zero bloated UI libraries (Vanilla CSS design tokens), 233 kB JS bundle, 30 kB CSS bundle, instant sub-second render. |
-| **#4** | **Testing** | Automated Vitest test suite with **30 passing tests** covering calendar URL generation, Haversine geospatial math, transit calculations, sanitization, and schedule customizer. |
-| **#5** | **Accessibility** | WCAG 2.1 AA compliant, skip-to-content landmark, semantic HTML5 tags, high-contrast dark/light theme support, accessible SVGs, focus rings, ESC key modal traps. |
-| **#6** | **Google Services** | **Tri-Service Integration**: Google Gemini 1.5 Flash AI Assistant, Google Maps deep wayfinding navigation, and Google Calendar 1-click sync. |
-
----
-
-## 🌟 Standout Innovative Features
-
-### 1. Dynamic Student Profile & Department Switcher
-Students are not locked into static data. Any student can click their profile avatar in the header to:
-- **Set their own Name, Student ID, College / Faculty, Degree Program, and Year.**
-- **Instantly switch between Department Presets**:
-  - 💻 *Computer Science & Engineering* (Alex Rivera)
-  - 🔬 *Biomedical Sciences & Pre-Med* (Maya Lin)
-  - 📊 *Business Analytics & Economics* (Jordan Smith)
-  - ✏️ *Custom Student / My College* (Start from a blank slate and build your own timetable!)
-
-### 2. Full Routine Modification & Custom Class Addition
-In the **"My Timetable & Calendar"** view, students can click **"+ Add My Class"** to add their own custom lectures, labs, or seminars:
-- Choose course code, title, professor, day, start/end time, and building/room.
-- Automatically calculates the **Next-Class Proximity Spotlight**, transit walking times, and generates a direct **"Add to Google Calendar"** link for that exact custom class!
-- Students can also remove classes with 1 click using the delete button.
-
-### 3. "Next-Hop" Campus Transit Buffer & Proximity Calculator
-Students often rush between consecutive classes situated in different quads. CampuSphere automatically analyzes back-to-back class transitions using mathematical **Haversine geospatial calculations**, calculates estimated walking transit time (incorporating building egress and elevator buffers), and alerts students if their transition buffer is tight:
-- *Example:* **CS 301** in Turing Hall ends at 10:15 AM $\rightarrow$ **MATH 240** in Ada Lovelace Center starts at 10:30 AM.
-- *CampuSphere Advisory:* Identifies a 15-minute window, calculates 245m walking transit (~5 mins), and warns that the remaining buffer is 10 minutes, with a 1-click Google Maps walking route link!
-
-### 2. Live Campus Pulse & Study Space Telemetry
-Monitors real-time capacity, acoustic noise decibels, and available power outlets across campus libraries, dining commons, and maker labs. If a space exceeds 75% capacity, CampuSphere dynamically suggests the nearest quieter alternative (e.g. *Alexandria Floor 3 is 85% full $\rightarrow$ recommends Lovelace Center LC-225*).
-
-### 3. Tri-Service Google Integration
-1. **Google Gemini AI Campus Concierge**:
-   - In-context generative assistant grounded in university room codes, shuttle alerts, library policies, and student wellness support.
-   - Runs with live Google Gemini 1.5 Flash API when `VITE_GEMINI_API_KEY` is provided, with an automatic graceful grounded fallback engine if offline or unconfigured.
-2. **Google Maps Wayfinding & Satellite Deep Links**:
-   - Deep-linked routes with precise latitude/longitude coordinates pre-populated for walking navigation across all campus facilities.
-3. **Google Calendar 1-Click Sync**:
-   - Seamless one-click schedule sync into Google Calendar with formatted RFC 5545 dates, course codes, instructor names, and room locations. Also includes universal `.ics` file export for Apple/Outlook Calendar.
-
----
 
 ## 🚀 Quick Start Guide
 
