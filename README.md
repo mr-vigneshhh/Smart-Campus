@@ -2,7 +2,7 @@
 
 > **An intelligent, accessible, high-efficiency campus assistant designed to eliminate university navigation friction, organize student academic routines, monitor study spot occupancy, and integrate Google Cloud services.**
 
-Built for the **Smart Campus Assistant Challenge** during a 2-hour solo hackathon sprint.
+
 
 ---
 
